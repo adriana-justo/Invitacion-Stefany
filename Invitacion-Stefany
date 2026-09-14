@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis 15 Años - Stefany</title>
+
+  <!-- Fuentes de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold-primary: #d4af37;
+      --gold-light: #f7e7a0;
+      --gold-dark: #b8860b;
+      --bg-cream: #faf6f0;
+      --text-dark: #2c2c2c;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0f0f10;
+      color: var(--text-dark);
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .card-container {
+      width: 100%;
+      max-width: 480px;
+      background-color: var(--white);
+      box-shadow: 0 0 35px rgba(0,0,0,0.6);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ANIMACIÓN DE REVELADO */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* HERO */
+    .hero-section {
+      position: relative;
+      height: 480px;
+      background: url('foto1.jpg') center top / cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding-bottom: 25px;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.75) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.8rem;
+      color: var(--gold-light);
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+      line-height: 1;
+    }
+
+    .hero-subtitle {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 5px;
+      color: #ffffff;
+      margin-top: 5px;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    }
+
+    /* DEDICATORIA */
+    .message-section {
+      background-color: var(--bg-cream);
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    .message-box {
+      background: #ffffff;
+      border: 2px solid var(--gold-primary);
+      border-radius: 12px;
+      padding: 25px 20px;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+    }
+
+    .message-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .message-footer {
+      font-weight: 600;
+      margin-top: 15px;
+      color: var(--gold-dark);
+      font-size: 1.1rem;
+    }
+
+    /* CONTEO REGRESIVO */
+    .countdown-section {
+      position: relative;
+      padding: 60px 20px 50px;
+      background: url('foto2.jpg') center/cover no-repeat;
+      text-align: center;
+      color: white;
+    }
+
+    .countdown-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.65);
+    }
+
+    .countdown-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .script-header {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.2rem;
+      color: var(--gold-light);
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+    }
+
+    .timer-grid {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .timer-block {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--gold-primary);
+      padding: 10px 6px;
+      border-radius: 8px;
+      min-width: 68px;
+    }
+
+    .timer-number {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .timer-label {
+      font-size: 0.65rem;
+      letter-spacing: 1px;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* FECHA */
+    .date-section {
+      background-color: var(--white);
+      padding: 35px 15px 25px;
+      text-align: center;
+    }
+
+    .date-table {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .date-col {
+      border: 1.5px solid #e0e0e0;
+      padding: 10px 12px;
+      border-radius: 8px;
+      flex: 1;
+      max-width: 110px;
+      background: #fff;
+    }
+
+    .date-col.active {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+      transform: scale(1.05);
+    }
+
+    .day-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .month-name {
+      font-size: 0.85rem;
+      color: #666;
+      margin: 4px 0;
+    }
+
+    .day-number {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      line-height: 1;
+    }
+
+    /* BOTONES */
+    .btn {
+      display: inline-block;
+      width: 90%;
+      padding: 14px 20px;
+      border: 2px solid var(--gold-primary);
+      background: #ffffff;
+      color: var(--text-dark);
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn-pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6); }
+      70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+    }
+
+    .btn:hover {
+      background: var(--gold-primary);
+      color: #fff;
+    }
+
+    .gold-divider {
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--gold-primary), transparent);
+      margin: 10px 0 30px 0;
+    }
+
+    /* GALERÍA */
+    .gallery-section {
+      padding: 35px 20px;
+      background: var(--white);
+      text-align: center;
+    }
+
+    .gallery-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.2rem;
+      color: var(--gold-dark);
+      margin-bottom: 20px;
+    }
+
+    .main-photo-card {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+      border: 3px solid var(--gold-light);
+      margin-bottom: 15px;
+    }
+
+    .main-photo-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* UBICACIÓN */
+    .location-section {
+      background-color: var(--bg-cream);
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    .location-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.8rem;
+      color: var(--gold-dark);
+      margin-bottom: 5px;
+    }
+
+    .location-details {
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .location-time {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.8rem;
+      color: var(--gold-primary);
+      margin: 10px 0 20px;
+    }
+
+    /* ITINERARIO */
+    .itinerary-section {
+      background: #fff;
+      padding: 35px 20px 45px;
+      text-align: center;
+    }
+
+    .itinerary-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 4px;
+      color: var(--gold-primary);
+      margin-bottom: 30px;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0; left: 50%;
+      width: 2px;
+      background: var(--gold-primary);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    .timeline-item:nth-child(odd) {
+      justify-content: flex-start;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      justify-content: flex-end;
+      text-align: left;
+    }
+
+    .timeline-content {
+      width: 42%;
+    }
+
+    .timeline-time {
+      font-family: 'Oswald', sans-serif;
+      color: var(--gold-dark);
+      font-size: 1.05rem;
+    }
+
+    .timeline-event {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .timeline-icon {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
+      background: var(--gold-primary);
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      border: 2px solid #fff;
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    /* MODAL FLOTANTE */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: #fff;
+      width: 100%;
+      max-width: 400px;
+      padding: 25px 20px;
+      border-radius: 12px;
+      border: 2px solid var(--gold-primary);
+      position: relative;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 10px; right: 15px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #888;
+      cursor: pointer;
+    }
+
+    .modal-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.8rem;
+      color: var(--gold-dark);
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--gold-primary);
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: var(--gold-primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+      background: var(--gold-dark);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+
+    <!-- PORTADA -->
+    <div class="hero-section" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <h1 class="hero-title">Stefany</h1>
+        <p class="hero-subtitle">XV Años 👑</p>
+      </div>
+    </div>
+
+    <!-- DEDICATORIA -->
+    <div class="message-section">
+      <div class="message-box reveal">
+        <p class="message-text">
+          Hay eventos en la vida que son muy especiales por sí solos, pero poder compartirlos con quienes más quiero los convierte en momentos únicos e inolvidables.
+        </p>
+        <p class="message-footer">¡Te espero en mi fiesta!</p>
+      </div>
+    </div>
+
+    <!-- CONTEO REGRESIVO -->
+    <div class="countdown-section">
+      <div class="countdown-overlay"></div>
+      <div class="countdown-content reveal">
+        <div class="script-header">solo faltan</div>
+        
+        <div class="timer-grid">
+          <div class="timer-block">
+            <div id="days" class="timer-number">00</div>
+            <div class="timer-label">Días</div>
+          </div>
+          <div class="timer-block">
+            <div id="hours" class="timer-number">00</div>
+            <div class="timer-label">Horas</div>
+          </div>
+          <div class="timer-block">
+            <div id="minutes" class="timer-number">00</div>
+            <div class="timer-label">Minutos</div>
+          </div>
+          <div class="timer-block">
+            <div id="seconds" class="timer-number">00</div>
+            <div class="timer-label">Segundos</div>
+          </div>
+        </div>
+
+        <div class="script-header">para este día</div>
+      </div>
+    </div>
+
+    <!-- FECHA Y BOTÓN DE CONFIRMACIÓN -->
+    <div class="date-section">
+      <div class="date-table reveal">
+        <div class="date-col">
+          <div class="day-name">Viernes</div>
+          <div class="month-name">Octubre</div>
+          <div class="day-number">09</div>
+        </div>
+        <div class="date-col active">
+          <div class="day-name">Sábado</div>
+          <div class="month-name">Octubre</div>
+          <div class="day-number">10</div>
+        </div>
+        <div class="date-col">
+          <div class="day-name">Domingo</div>
+          <div class="month-name">Octubre</div>
+          <div class="day-number">11</div>
+        </div>
+      </div>
+
+      <button id="openModalBtn" class="btn btn-pulse reveal">
+        CONFIRMAR ASISTENCIA
+      </button>
+    </div>
+
+    <div class="gold-divider"></div>
+
+    <!-- GALERÍA -->
+    <div class="gallery-section">
+      <h2 class="gallery-title reveal">Nuestra Quinceañera</h2>
+      <div class="main-photo-card reveal">
+        <img src="foto3.jpg" alt="Stefany">
+      </div>
+    </div>
+
+    <div class="gold-divider"></div>
+
+    <!-- UBICACIÓN -->
+    <div class="location-section">
+      <h2 class="location-title reveal">Lugar</h2>
+      <p class="location-details reveal">
+        Acompáñanos a celebrar este gran día.<br>
+        <strong>Ubicación de la Recepción</strong>
+      </p>
+      <div class="location-time reveal">8:00 pm</div>
+
+      <a href="https://www.google.com/maps/dir/-16.4095669,-71.5241735/-17.1802248,-70.8982033/@-16.837603,-72.0446212,9z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn reveal">
+        VER MAPA
+      </a>
+    </div>
+
+    <div class="gold-divider"></div>
+
+    <!-- ITINERARIO ACTUALIZADO -->
+    <div class="itinerary-section">
+      <h2 class="itinerary-title reveal">ITINERARIO</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-time">09:00 pm</div>
+            <div class="timeline-event">Entrada</div>
+          </div>
+          <div class="timeline-icon">👠</div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-time">10:00 pm</div>
+            <div class="timeline-event">Vals</div>
+          </div>
+          <div class="timeline-icon">💃</div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-time">10:15 pm</div>
+            <div class="timeline-event">Brindis</div>
+          </div>
+          <div class="timeline-icon">🥂</div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-time">10:30 pm</div>
+            <div class="timeline-event">Cena</div>
+          </div>
+          <div class="timeline-icon">🍽️</div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-time">11:00 pm</div>
+            <div class="timeline-event">Baile Sorpresa</div>
+          </div>
+          <div class="timeline-icon">✨</div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-time">11:30 pm</div>
+            <div class="timeline-event">Hora Loca</div>
+          </div>
+          <div class="timeline-icon">🎉</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MODAL / FORMULARIO FLOTANTE -->
+  <div id="rsvpModal" class="modal-overlay">
+    <div class="modal-content">
+      <span id="closeModalBtn" class="close-modal">&times;</span>
+      <h2 class="modal-title">Confirmar Asistencia</h2>
+      
+      <!-- FORMULARIO CONECTADO A WEB3FORMS -->
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="8187bee6-596d-446d-a4da-181b8a825e00">
+        <input type="hidden" name="subject" value="Nueva Confirmación - 15 de Stefany">
+
+        <div class="form-group">
+          <label for="name">Nombre y Apellido *</label>
+          <input type="text" id="name" name="Nombre" class="form-control" placeholder="Ej. María García" required>
+        </div>
+
+        <div class="form-group">
+          <label for="guests">N° de Acompañantes *</label>
+          <select id="guests" name="Acompañantes" class="form-control" required>
+            <option value="Solo yo">Solo yo (1 persona)</option>
+            <option value="1 acompañante">1 Acompañante (2 personas)</option>
+            <option value="2 acompañantes">2 Acompañantes (3 personas)</option>
+            <option value="3 acompañantes">3 Acompañantes (4 personas)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="song">Canción que sugieres para el DJ 🎵</label>
+          <input type="text" id="song" name="Cancion_Sugerida" class="form-control" placeholder="Nombre de la canción o artista">
+        </div>
+
+        <button type="submit" class="submit-btn">ENVIAR CONFIRMACIÓN</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    // CONTROL DEL MODAL
+    const modal = document.getElementById('rsvpModal');
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+
+    openBtn.onclick = function() {
+      modal.style.display = 'flex';
+    }
+
+    closeBtn.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
