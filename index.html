@@ -80,7 +80,7 @@
       position: relative;
       z-index: 2;
       text-align: center;
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
     .hero-tag {
@@ -97,7 +97,6 @@
       z-index: 2;
       text-align: center;
       color: #fff;
-      margin-bottom: 10px;
     }
 
     .hero-title {
@@ -118,23 +117,25 @@
       text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
     }
 
-    /* DESLICE HACIA ABAJO */
+    /* DESLICE HACIA ABAJO CON FLECHAS */
     .scroll-indicator {
       position: relative;
       z-index: 2;
       text-align: center;
       color: #ffffff;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       letter-spacing: 2px;
       text-transform: uppercase;
       animation: bounce 2s infinite;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
     }
 
-    .scroll-indicator span {
+    .arrows-down {
       display: block;
-      font-size: 1.2rem;
-      margin-top: -3px;
+      font-size: 1.1rem;
+      margin-top: 2px;
+      letter-spacing: 1px;
+      color: var(--gold-light);
     }
 
     @keyframes bounce {
@@ -172,51 +173,10 @@
       line-height: 1;
     }
 
-    /* PADRES Y PADRINOS (ESTILO CASTILLO) */
-    .hosts-section {
-      background: linear-gradient(rgba(15, 15, 16, 0.85), rgba(15, 15, 16, 0.85)), url('foto1.jpg') center/cover no-repeat;
-      padding: 45px 20px;
-      text-align: center;
-      color: #ffffff;
-    }
-
-    .hosts-blessing {
-      font-family: 'Cinzel', serif;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: var(--gold-light);
-      margin-bottom: 25px;
-      letter-spacing: 1px;
-    }
-
-    .ornament-divider {
-      color: var(--gold-primary);
-      font-size: 1.2rem;
-      margin: 15px 0;
-      letter-spacing: 5px;
-    }
-
-    .hosts-title {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.2rem;
-      color: var(--gold-light);
-      margin-bottom: 8px;
-    }
-
-    .hosts-names {
-      font-family: 'Cinzel', serif;
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      color: #ffffff;
-      line-height: 1.8;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
     /* CONTEO REGRESIVO */
     .countdown-section {
       position: relative;
-      padding: 60px 20px 50px;
+      padding: 55px 20px 45px;
       background: url('foto2.jpg') center/cover no-repeat;
       text-align: center;
       color: white;
@@ -271,16 +231,16 @@
       margin-top: 2px;
     }
 
-    /* CALENDARIO MENSUAL COMPLETO */
+    /* CALENDARIO 2026 EXACTO */
     .calendar-section {
       background-color: var(--white);
-      padding: 40px 20px 30px;
+      padding: 35px 20px 30px;
       text-align: center;
     }
 
     .calendar-main-day {
       font-family: 'Cinzel', serif;
-      font-size: 4.5rem;
+      font-size: 4rem;
       color: var(--gold-dark);
       line-height: 1;
       font-weight: 700;
@@ -288,64 +248,113 @@
 
     .calendar-main-month {
       font-family: 'Cinzel', serif;
-      font-size: 1.4rem;
-      letter-spacing: 6px;
+      font-size: 1.3rem;
+      letter-spacing: 5px;
       color: var(--text-dark);
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .calendar-time-badge {
       display: inline-block;
       border: 1px solid var(--gold-primary);
       border-radius: 15px;
-      padding: 4px 18px;
+      padding: 3px 16px;
       font-family: 'Oswald', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: var(--gold-dark);
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     .calendar-grid {
-      max-width: 320px;
+      max-width: 310px;
       margin: 0 auto 25px;
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #eee;
     }
 
     .calendar-days-header {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
-      font-family: 'Cinzel', serif;
-      font-size: 0.8rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
       font-weight: 700;
-      color: var(--gold-dark);
+      color: var(--text-dark);
       margin-bottom: 12px;
     }
 
     .calendar-days-grid {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
-      gap: 6px;
+      gap: 5px;
       font-family: 'Montserrat', sans-serif;
       font-size: 0.85rem;
-      color: #555;
+      color: #666;
     }
 
     .calendar-day-cell {
-      padding: 6px 0;
+      padding: 5px 0;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
+    .calendar-day-cell.muted {
+      color: #ccc;
+    }
+
     .calendar-day-cell.event-day {
-      background: var(--gold-dark);
+      background: var(--gold-primary);
       color: #ffffff;
       font-weight: bold;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
+      border-radius: 6px;
+      width: 28px;
+      height: 28px;
       margin: 0 auto;
-      box-shadow: 0 0 10px rgba(184, 134, 11, 0.5);
+      box-shadow: 0 2px 8px rgba(212, 175, 55, 0.6);
+    }
+
+    /* PADRES Y PADRINOS (ESTILO CASTILLO) */
+    .hosts-section {
+      background: linear-gradient(rgba(15, 15, 16, 0.88), rgba(15, 15, 16, 0.88)), url('foto1.jpg') center/cover no-repeat;
+      padding: 40px 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .hosts-blessing {
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--gold-light);
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .ornament-divider {
+      color: var(--gold-primary);
+      font-size: 1.1rem;
+      margin: 12px 0;
+      letter-spacing: 4px;
+    }
+
+    .hosts-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+
+    .hosts-names {
+      font-family: 'Cinzel', serif;
+      font-size: 0.88rem;
+      letter-spacing: 2px;
+      color: #ffffff;
+      line-height: 1.8;
+      text-transform: uppercase;
+      font-weight: 600;
     }
 
     /* BOTONES */
@@ -417,36 +426,27 @@
       display: block;
     }
 
-    /* DRESS CODE */
-    .dresscode-section {
-      background: #fff;
-      padding: 30px 20px;
+    /* CÓDIGO DE VESTIMENTA COMPACTO */
+    .dresscode-compact {
+      background: var(--bg-cream);
+      padding: 20px 15px;
       text-align: center;
+      border-top: 1px solid rgba(212, 175, 55, 0.3);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
     }
 
-    .dresscode-title {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.2rem;
-      color: var(--gold-dark);
-      margin-bottom: 10px;
-    }
-
-    .dresscode-badge {
-      display: inline-block;
+    .dresscode-compact-title {
       font-family: 'Oswald', sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.05rem;
       letter-spacing: 3px;
-      color: var(--gold-primary);
-      border: 1px solid var(--gold-primary);
-      padding: 8px 20px;
-      border-radius: 20px;
+      color: var(--gold-dark);
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 4px;
     }
 
-    .dresscode-subtext {
+    .dresscode-compact-text {
       font-size: 0.85rem;
-      color: #666;
+      color: #555;
       font-style: italic;
     }
 
@@ -705,7 +705,7 @@
 
   <div class="card-container">
 
-    <!-- PORTADA -->
+    <!-- 1. PORTADA CON FOTO DE STEFANY Y DESLICE HACIA ABAJO -->
     <div class="hero-section" id="hero">
       <div class="hero-overlay"></div>
       
@@ -718,14 +718,13 @@
         <p class="hero-subtitle">XV Años 👑</p>
       </div>
 
-      <!-- INDICADOR DESLICE HACIA ABAJO -->
       <div class="scroll-indicator reveal">
         Deslice hacia abajo
-        <span>🪶</span>
+        <span class="arrows-down">☨</span>
       </div>
     </div>
 
-    <!-- DEDICATORIA -->
+    <!-- 2. LA FRASE DEDICATORIA -->
     <div class="message-section">
       <div class="message-box reveal">
         <p class="message-text">
@@ -735,34 +734,7 @@
       </div>
     </div>
 
-    <!-- PADRES Y PADRINOS -->
-    <div class="hosts-section">
-      <p class="hosts-blessing reveal">
-        Con la bendición de Dios y la compañía<br>de mis padres y padrinos:
-      </p>
-
-      <div class="ornament-divider">❖ ─── ✦ ─── ❖</div>
-
-      <div class="hosts-block reveal">
-        <h2 class="hosts-title">Padres</h2>
-        <div class="hosts-names">
-          GARY CATERIANO CATERIANO<br>
-          KAREM JUSTO PORTOCARRERO
-        </div>
-      </div>
-
-      <div class="ornament-divider">❖ ─── ✦ ─── ❖</div>
-
-      <div class="hosts-block reveal">
-        <h2 class="hosts-title">Padrinos</h2>
-        <div class="hosts-names">
-          HECTOR ORDOÑEZ PORTOCARRERO<br>
-          CAROLINA RUBIO SAVOIRE
-        </div>
-      </div>
-    </div>
-
-    <!-- CONTEO REGRESIVO -->
+    <!-- 3. CONTEO REGRESIVO (SOLO FALTAN...) -->
     <div class="countdown-section">
       <div class="countdown-overlay"></div>
       <div class="countdown-content reveal">
@@ -791,27 +763,27 @@
       </div>
     </div>
 
-    <!-- CALENDARIO COMPLETO OCTUBRE Y PRIMER BOTÓN DE CONFIRMACIÓN -->
+    <!-- 4. CALENDARIO OCTUBRE 2026 + PRIMER BOTÓN CONFIRMAR -->
     <div class="calendar-section">
       <div class="calendar-main-day reveal">10</div>
-      <div class="calendar-main-month reveal">OCTUBRE</div>
+      <div class="calendar-main-month reveal">OCTUBRE DE 2026</div>
       <div class="calendar-time-badge reveal">8:30 PM</div>
 
       <div class="calendar-grid reveal">
         <div class="calendar-days-header">
-          <div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div><div>Vie</div><div>Sáb</div><div>Dom</div>
+          <div>DO</div><div>LU</div><div>MA</div><div>MI</div><div>JU</div><div>VI</div><div>SA</div>
         </div>
         <div class="calendar-days-grid">
-          <!-- Días previos vacíos -->
-          <div class="calendar-day-cell"></div><div class="calendar-day-cell"></div>
-          <div class="calendar-day-cell">01</div><div class="calendar-day-cell">02</div><div class="calendar-day-cell">03</div><div class="calendar-day-cell">04</div><div class="calendar-day-cell">05</div>
-          <div class="calendar-day-cell">06</div><div class="calendar-day-cell">07</div><div class="calendar-day-cell">08</div><div class="calendar-day-cell">09</div>
-          <!-- Día destacado -->
+          <!-- Días finales de Septiembre -->
+          <div class="calendar-day-cell muted">27</div><div class="calendar-day-cell muted">28</div><div class="calendar-day-cell muted">29</div><div class="calendar-day-cell muted">30</div>
+          <!-- Octubre 2026 -->
+          <div class="calendar-day-cell">1</div><div class="calendar-day-cell">2</div><div class="calendar-day-cell">3</div>
+          <div class="calendar-day-cell">4</div><div class="calendar-day-cell">5</div><div class="calendar-day-cell">6</div><div class="calendar-day-cell">7</div><div class="calendar-day-cell">8</div><div class="calendar-day-cell">9</div>
+          <!-- SÁBADO 10 DESTACADO EN DORADO -->
           <div class="calendar-day-cell"><div class="event-day">10</div></div>
-          <div class="calendar-day-cell">11</div><div class="calendar-day-cell">12</div>
-          <div class="calendar-day-cell">13</div><div class="calendar-day-cell">14</div><div class="calendar-day-cell">15</div><div class="calendar-day-cell">16</div><div class="calendar-day-cell">17</div><div class="calendar-day-cell">18</div><div class="calendar-day-cell">19</div>
-          <div class="calendar-day-cell">20</div><div class="calendar-day-cell">21</div><div class="calendar-day-cell">22</div><div class="calendar-day-cell">23</div><div class="calendar-day-cell">24</div><div class="calendar-day-cell">25</div><div class="calendar-day-cell">26</div>
-          <div class="calendar-day-cell">27</div><div class="calendar-day-cell">28</div><div class="calendar-day-cell">29</div><div class="calendar-day-cell">30</div><div class="calendar-day-cell">31</div>
+          <div class="calendar-day-cell">11</div><div class="calendar-day-cell">12</div><div class="calendar-day-cell">13</div><div class="calendar-day-cell">14</div><div class="calendar-day-cell">15</div><div class="calendar-day-cell">16</div><div class="calendar-day-cell">17</div>
+          <div class="calendar-day-cell">18</div><div class="calendar-day-cell">19</div><div class="calendar-day-cell">20</div><div class="calendar-day-cell">21</div><div class="calendar-day-cell">22</div><div class="calendar-day-cell">23</div><div class="calendar-day-cell">24</div>
+          <div class="calendar-day-cell">25</div><div class="calendar-day-cell">26</div><div class="calendar-day-cell">27</div><div class="calendar-day-cell">28</div><div class="calendar-day-cell">29</div><div class="calendar-day-cell">30</div><div class="calendar-day-cell">31</div>
         </div>
       </div>
 
@@ -820,9 +792,36 @@
       </button>
     </div>
 
+    <!-- 5. PADRES Y PADRINOS -->
+    <div class="hosts-section">
+      <p class="hosts-blessing reveal">
+        Con la bendición de Dios y la compañía<br>de mis padres y padrinos:
+      </p>
+
+      <div class="ornament-divider">❖ ─── ✦ ─── ❖</div>
+
+      <div class="hosts-block reveal">
+        <h2 class="hosts-title">Padres</h2>
+        <div class="hosts-names">
+          GARY CATERIANO CATERIANO<br>
+          KAREM JUSTO PORTOCARRERO
+        </div>
+      </div>
+
+      <div class="ornament-divider">❖ ─── ✦ ─── ❖</div>
+
+      <div class="hosts-block reveal">
+        <h2 class="hosts-title">Padrinos</h2>
+        <div class="hosts-names">
+          HECTOR ORDOÑEZ PORTOCARRERO<br>
+          CAROLINA RUBIO SAVOIRE
+        </div>
+      </div>
+    </div>
+
     <div class="gold-divider"></div>
 
-    <!-- GALERÍA -->
+    <!-- 6. NUESTRA QUINCEAÑERA (GALERÍA) -->
     <div class="gallery-section">
       <h2 class="gallery-title reveal">Nuestra Quinceañera</h2>
       <div class="main-photo-card reveal">
@@ -830,18 +829,15 @@
       </div>
     </div>
 
-    <div class="gold-divider"></div>
-
-    <!-- DRESS CODE (CÓDIGO DE VESTIMENTA) -->
-    <div class="dresscode-section reveal">
-      <h2 class="dresscode-title">Código de Vestimenta</h2>
-      <div class="dresscode-badge">👗 ELEGANTE 👔</div>
-      <p class="dresscode-subtext">Reservamos los tonos dorados y blancos para la quinceañera ✨</p>
+    <!-- 7. CÓDIGO DE VESTIMENTA COMPACTO Y ELEGANTE -->
+    <div class="dresscode-compact reveal">
+      <div class="dresscode-compact-title">👗 Código de Vestimenta: Elegante 👔</div>
+      <div class="dresscode-compact-text">Reservamos los tonos dorados para la quinceañera ✨</div>
     </div>
 
     <div class="gold-divider"></div>
 
-    <!-- UBICACIÓN -->
+    <!-- 8. LUGAR -->
     <div class="location-section">
       <h2 class="location-title reveal">Lugar</h2>
       <p class="location-details reveal">
@@ -859,7 +855,7 @@
 
     <div class="gold-divider"></div>
 
-    <!-- ITINERARIO -->
+    <!-- 9. ITINERARIO -->
     <div class="itinerary-section">
       <h2 class="itinerary-title reveal">ITINERARIO</h2>
 
@@ -916,7 +912,7 @@
 
     <div class="gold-divider" style="margin-bottom: 0;"></div>
 
-    <!-- SECCIÓN DE SEGUNDA CONFIRMACIÓN Y NOTA AL FINAL -->
+    <!-- 10. CONFIRMACIÓN FINAL + FECHA LÍMITE + PUNTUALIDAD -->
     <div class="rsvp-section">
       <button class="btn btn-pulse openModalBtn reveal">
         CONFIRMAR ASISTENCIA
