@@ -316,7 +316,7 @@
       box-shadow: 0 2px 8px rgba(212, 175, 55, 0.6);
     }
 
-    /* PADRES Y PADRINOS (ESTILO CASTILLO) */
+    /* PADRES Y PADRINOS */
     .hosts-section {
       background: linear-gradient(rgba(15, 15, 16, 0.88), rgba(15, 15, 16, 0.88)), url('foto1.jpg') center/cover no-repeat;
       padding: 40px 20px;
@@ -357,46 +357,6 @@
       font-weight: 600;
     }
 
-    /* BOTONES */
-    .btn {
-      display: inline-block;
-      width: 90%;
-      padding: 14px 20px;
-      border: 2px solid var(--gold-primary);
-      background: #ffffff;
-      color: var(--text-dark);
-      font-family: 'Oswald', sans-serif;
-      font-size: 1rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    .btn-pulse {
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6); }
-      70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
-    }
-
-    .btn:hover {
-      background: var(--gold-primary);
-      color: #fff;
-    }
-
-    .gold-divider {
-      height: 2px;
-      background: linear-gradient(to right, transparent, var(--gold-primary), transparent);
-      margin: 10px 0 30px 0;
-    }
-
     /* GALERÍA */
     .gallery-section {
       padding: 35px 20px;
@@ -426,7 +386,7 @@
       display: block;
     }
 
-    /* CÓDIGO DE VESTIMENTA COMPACTO */
+    /* CÓDIGO DE VESTIMENTA */
     .dresscode-compact {
       background: var(--bg-cream);
       padding: 20px 15px;
@@ -557,16 +517,115 @@
       box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
     }
 
-    /* SECCIÓN CONFIRMACIÓN AL FINAL */
-    .rsvp-section {
+    /* SUGERENCIA DE CANCIONES */
+    .song-section {
       background-color: var(--bg-cream);
-      padding: 40px 20px 45px;
+      padding: 35px 20px;
       text-align: center;
+    }
+
+    .song-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.2rem;
+      color: var(--gold-dark);
+      margin-bottom: 8px;
+    }
+
+    .song-text {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    /* SUGERENCIA DE REGALOS & YAPE */
+    .gift-section {
+      background-color: #fff;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    .gift-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.2rem;
+      color: var(--gold-dark);
+      margin-bottom: 10px;
+    }
+
+    .gift-text {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .qr-card {
+      background: var(--bg-cream);
+      border: 2px solid var(--gold-primary);
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 300px;
+      margin: 0 auto;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+    }
+
+    .qr-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.4rem;
+      color: var(--gold-dark);
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .qr-img {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      background: #fff;
+    }
+
+    .qr-holder {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    /* ÁLBUM DE RECUERDOS */
+    .album-section {
+      background-color: var(--bg-cream);
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    .album-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.2rem;
+      color: var(--gold-dark);
+      margin-bottom: 8px;
+    }
+
+    .album-text {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    /* SECCIÓN CONFIRMACIÓN AL FINAL CON FOTO */
+    .rsvp-final-section {
+      background: linear-gradient(rgba(15, 15, 16, 0.85), rgba(15, 15, 16, 0.85)), url('foto4.jpg') center/cover no-repeat;
+      padding: 50px 20px 45px;
+      text-align: center;
+      color: #ffffff;
     }
 
     .rsvp-deadline {
       font-size: 0.9rem;
-      color: #555;
+      color: var(--gold-light);
       margin-top: 15px;
       font-style: italic;
       line-height: 1.4;
@@ -575,11 +634,51 @@
 
     .rsvp-punctuality {
       font-size: 0.85rem;
-      color: var(--gold-dark);
+      color: #ffffff;
       margin-top: 10px;
       font-weight: 600;
       font-style: italic;
       padding: 0 10px;
+    }
+
+    /* BOTONES GENERALES */
+    .btn {
+      display: inline-block;
+      width: 90%;
+      padding: 14px 20px;
+      border: 2px solid var(--gold-primary);
+      background: #ffffff;
+      color: var(--text-dark);
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn-pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6); }
+      70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+    }
+
+    .btn:hover {
+      background: var(--gold-primary);
+      color: #fff;
+    }
+
+    .gold-divider {
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--gold-primary), transparent);
+      margin: 10px 0 30px 0;
     }
 
     /* BOTÓN REPRODUCTOR DE MÚSICA FLOTANTE */
@@ -734,7 +833,7 @@
       </div>
     </div>
 
-    <!-- 3. CONTEO REGRESIVO (SOLO FALTAN...) -->
+    <!-- 3. CONTEO REGRESIVO -->
     <div class="countdown-section">
       <div class="countdown-overlay"></div>
       <div class="countdown-content reveal">
@@ -763,7 +862,7 @@
       </div>
     </div>
 
-    <!-- 4. CALENDARIO OCTUBRE 2026 + PRIMER BOTÓN CONFIRMAR -->
+    <!-- 4. CALENDARIO OCTUBRE 2026 -->
     <div class="calendar-section">
       <div class="calendar-main-day reveal">10</div>
       <div class="calendar-main-month reveal">OCTUBRE DE 2026</div>
@@ -774,12 +873,9 @@
           <div>DO</div><div>LU</div><div>MA</div><div>MI</div><div>JU</div><div>VI</div><div>SA</div>
         </div>
         <div class="calendar-days-grid">
-          <!-- Días finales de Septiembre -->
           <div class="calendar-day-cell muted">27</div><div class="calendar-day-cell muted">28</div><div class="calendar-day-cell muted">29</div><div class="calendar-day-cell muted">30</div>
-          <!-- Octubre 2026 -->
           <div class="calendar-day-cell">1</div><div class="calendar-day-cell">2</div><div class="calendar-day-cell">3</div>
           <div class="calendar-day-cell">4</div><div class="calendar-day-cell">5</div><div class="calendar-day-cell">6</div><div class="calendar-day-cell">7</div><div class="calendar-day-cell">8</div><div class="calendar-day-cell">9</div>
-          <!-- SÁBADO 10 DESTACADO EN DORADO -->
           <div class="calendar-day-cell"><div class="event-day">10</div></div>
           <div class="calendar-day-cell">11</div><div class="calendar-day-cell">12</div><div class="calendar-day-cell">13</div><div class="calendar-day-cell">14</div><div class="calendar-day-cell">15</div><div class="calendar-day-cell">16</div><div class="calendar-day-cell">17</div>
           <div class="calendar-day-cell">18</div><div class="calendar-day-cell">19</div><div class="calendar-day-cell">20</div><div class="calendar-day-cell">21</div><div class="calendar-day-cell">22</div><div class="calendar-day-cell">23</div><div class="calendar-day-cell">24</div>
@@ -829,7 +925,7 @@
       </div>
     </div>
 
-    <!-- 7. CÓDIGO DE VESTIMENTA COMPACTO Y ELEGANTE -->
+    <!-- 7. CÓDIGO DE VESTIMENTA -->
     <div class="dresscode-compact reveal">
       <div class="dresscode-compact-title">👗 Código de Vestimenta: Elegante 👔</div>
       <div class="dresscode-compact-text">Reservamos los tonos dorados para la quinceañera ✨</div>
@@ -910,10 +1006,61 @@
       </div>
     </div>
 
-    <div class="gold-divider" style="margin-bottom: 0;"></div>
+    <div class="gold-divider"></div>
 
-    <!-- 10. CONFIRMACIÓN FINAL + FECHA LÍMITE + PUNTUALIDAD -->
-    <div class="rsvp-section">
+    <!-- 10. SUGERENCIA DE CANCIONES -->
+    <div class="song-section reveal">
+      <h2 class="song-title">Sugerencia de Canciones</h2>
+      <p class="song-text">
+        En una noche tan especial, la música será parte de cada recuerdo.<br>
+        Déjame aquí esa canción que te gustaría escuchar en mis quince años.
+      </p>
+      <button class="btn openModalBtn">SUGERIR CANCIÓN</button>
+    </div>
+
+    <div class="gold-divider"></div>
+
+    <!-- 11. SUGERENCIA DE REGALOS & YAPE -->
+    <div class="gift-section reveal">
+      <h2 class="gift-title">Sugerencia de Regalos</h2>
+      <p class="gift-text">
+        Tu presencia es el regalo más grande que podría recibir en este día tan especial.<br>
+        Si deseas brindarme un detalle, lo recibiré con mucho cariño.<br>
+        También puedes optar por la tradicional lluvia de sobres.
+      </p>
+
+      <div class="qr-card">
+        <div class="qr-title">Lluvia de Sobres / Yape</div>
+        <img src="qr-yape.jpg" alt="QR Yape" class="qr-img">
+        <div class="qr-holder">Titular: Karem Justo Portocarrero</div>
+        
+        <!-- BOTÓN WHATSAPP DE CONFIRMACIÓN DE TRANSFERENCIA -->
+        <a href="https://wa.me/51953600000?text=Hola,%20adjunto%20mi%20confirmación%20de%20detalle%20para%20los%2015%20de%20Stefany" target="_blank" class="btn" style="padding: 10px 15px; font-size: 0.85rem;">
+          CONFIRMAR DETALLE ✉️
+        </a>
+      </div>
+    </div>
+
+    <div class="gold-divider"></div>
+
+    <!-- 12. ÁLBUM DE RECUERDOS -->
+    <div class="album-section reveal">
+      <h2 class="album-title">Álbum de Recuerdos</h2>
+      <p class="album-text">
+        Escanea el código QR o haz clic en el botón para subir tus mejores fotos del evento.<br>
+        <strong>¡COMPARTE CONMIGO!</strong>
+      </p>
+
+      <!-- SECCIÓN DEL QR Y BOTÓN DE LA APP DE FOTOS -->
+      <div style="margin-top: 15px;">
+        <button class="btn" onclick="alert('Próximamente se activará el enlace para subir tus fotos el día del evento.')">
+          SUBIR MIS FOTOS 📸
+        </button>
+      </div>
+    </div>
+
+    <!-- 13. SECCIÓN DE CONFIRMACIÓN FINAL CON FOTO DE LA NIÑA (FOTO4) -->
+    <div class="rsvp-final-section">
       <button class="btn btn-pulse openModalBtn reveal">
         CONFIRMAR ASISTENCIA
       </button>
@@ -934,9 +1081,9 @@
       <h2 class="modal-title">Confirmar Asistencia</h2>
       
       <!-- FORMULARIO CONECTADO A WEB3FORMS -->
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="8187bee6-596d-446d-a4da-181b8a825e00">
-        <input type="hidden" name="subject" value="Nueva Confirmación - 15 de Stefany">
+<form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="8187bee6-596d-446d-a4da-181b8a825e00">
+  <input type="hidden" name="subject" value="Nueva Confirmación - 15 de Stefany">
 
         <div class="form-group">
           <label for="name">Nombre y Apellido *</label>
