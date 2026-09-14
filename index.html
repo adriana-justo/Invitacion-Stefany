@@ -238,6 +238,45 @@
       line-height: 1;
     }
 
+    /* PADRES Y PADRINOS */
+    .hosts-section {
+      background-color: var(--bg-cream);
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    .hosts-card {
+      background: #ffffff;
+      border: 1px solid var(--gold-primary);
+      border-radius: 12px;
+      padding: 25px 20px;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.1);
+    }
+
+    .hosts-block {
+      margin-bottom: 20px;
+    }
+
+    .hosts-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .hosts-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.6rem;
+      color: var(--gold-dark);
+      margin-bottom: 5px;
+    }
+
+    .hosts-names {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 1.5px;
+      color: #444;
+      line-height: 1.8;
+      text-transform: uppercase;
+    }
+
     /* BOTONES */
     .btn {
       display: inline-block;
@@ -340,7 +379,7 @@
       font-style: italic;
     }
 
-    /* UBICACIÓN */
+    /* UBICACIÓN MEJORADA */
     .location-section {
       background-color: var(--bg-cream);
       padding: 35px 20px;
@@ -585,9 +624,9 @@
 </head>
 <body>
 
-  <!-- REPRODUCTOR DE AUDIO -->
+  <!-- REPRODUCTOR DE AUDIO (CONECTADO A 'musica') -->
   <audio id="bgMusic" loop>
-    <source src="musica.mp3" type="audio/mpeg">
+    <source src="musica" type="audio/mpeg">
   </audio>
 
   <!-- BOTÓN FLOTANTE DE MÚSICA -->
@@ -668,6 +707,29 @@
       </button>
     </div>
 
+    <!-- PADRES Y PADRINOS -->
+    <div class="hosts-section">
+      <div class="hosts-card reveal">
+        <div class="hosts-block">
+          <h2 class="hosts-title">Mis Padres</h2>
+          <div class="hosts-names">
+            GARY CATERIANO CATERIANO<br>
+            KAREM JUSTO PORTOCARRERO
+          </div>
+        </div>
+
+        <div class="gold-divider" style="margin: 15px 0;"></div>
+
+        <div class="hosts-block">
+          <h2 class="hosts-title">Mis Padrinos</h2>
+          <div class="hosts-names">
+            HECTOR ORDOÑEZ PORTOCARRERO<br>
+            CAROLINA RUBIO SAVOIRE
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="gold-divider"></div>
 
     <!-- GALERÍA -->
@@ -684,7 +746,7 @@
     <div class="dresscode-section reveal">
       <h2 class="dresscode-title">Código de Vestimenta</h2>
       <div class="dresscode-badge">👗 ELEGANTE 👔</div>
-      <p class="dresscode-subtext">Reservamos los tonos dorados para la quinceañera ✨</p>
+      <p class="dresscode-subtext">Reservamos los tonos dorados y blancos para la quinceañera ✨</p>
     </div>
 
     <div class="gold-divider"></div>
@@ -695,7 +757,7 @@
       <p class="location-details reveal">
         Acompáñanos a celebrar este gran día.<br>
         <strong style="font-size: 1.1rem; color: var(--gold-dark);">Local Bambú Fest</strong><br>
-        <span>C. Tahuantinsuyo con C. Huscar - Moquegua</span><br>
+        <span>C. Tahuantinsuyo con C. Huáscar - Moquegua</span><br>
         <span style="font-size: 0.85rem; color: #666; font-style: italic;">Ref. Por la Institución Educativa Particular Unión</span>
       </p>
       <div class="location-time reveal">8:00 pm</div>
@@ -707,25 +769,25 @@
 
     <div class="gold-divider"></div>
 
-    <!-- ITINERARIO -->
+    <!-- ITINERARIO ACTUALIZADO -->
     <div class="itinerary-section">
       <h2 class="itinerary-title reveal">ITINERARIO</h2>
 
       <div class="timeline">
         <div class="timeline-item reveal">
           <div class="timeline-content">
-            <div class="timeline-time">09:00 pm</div>
-            <div class="timeline-event">Entrada</div>
+            <div class="timeline-time">08:30 pm</div>
+            <div class="timeline-event">Recepción</div>
           </div>
-          <div class="timeline-icon">👠</div>
+          <div class="timeline-icon">🥂</div>
         </div>
 
         <div class="timeline-item reveal">
           <div class="timeline-content">
-            <div class="timeline-time">10:00 pm</div>
-            <div class="timeline-event">Vals</div>
+            <div class="timeline-time">09:00 pm</div>
+            <div class="timeline-event">Protocolo y Ceremonia</div>
           </div>
-          <div class="timeline-icon">💃</div>
+          <div class="timeline-icon">👑</div>
         </div>
 
         <div class="timeline-item reveal">
@@ -733,7 +795,7 @@
             <div class="timeline-time">10:15 pm</div>
             <div class="timeline-event">Brindis</div>
           </div>
-          <div class="timeline-icon">🥂</div>
+          <div class="timeline-icon">🍸</div>
         </div>
 
         <div class="timeline-item reveal">
