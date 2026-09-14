@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis 15 Años - Stefany Cateriano Justo</title>
+  <title>Mis 15 Años - Stefany</title>
 
   <!-- Fuentes de Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +61,7 @@
     /* HERO */
     .hero-section {
       position: relative;
-      height: 500px;
+      height: 480px;
       background: url('foto1.jpg') center top / cover no-repeat;
       display: flex;
       flex-direction: column;
@@ -73,7 +73,7 @@
     .hero-overlay {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.8) 100%);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.75) 100%);
     }
 
     .hero-content {
@@ -81,15 +81,14 @@
       z-index: 2;
       text-align: center;
       color: #fff;
-      padding: 0 15px;
     }
 
     .hero-title {
       font-family: 'Great Vibes', cursive;
-      font-size: 3.8rem;
+      font-size: 4.8rem;
       color: var(--gold-light);
       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
-      line-height: 1.1;
+      line-height: 1;
     }
 
     .hero-subtitle {
@@ -97,7 +96,7 @@
       font-size: 1.4rem;
       letter-spacing: 5px;
       color: #ffffff;
-      margin-top: 8px;
+      margin-top: 5px;
       text-transform: uppercase;
       text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
     }
@@ -123,13 +122,12 @@
       color: #555;
     }
 
-    .message-punctuality {
-      font-style: italic;
-      font-weight: 600;
-      margin-top: 15px;
+    .message-signature {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2rem;
       color: var(--gold-dark);
-      font-size: 0.9rem;
-      line-height: 1.4;
+      margin-top: 15px;
+      line-height: 1;
     }
 
     /* CONTEO REGRESIVO */
@@ -201,7 +199,7 @@
       display: flex;
       justify-content: center;
       gap: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 25px;
     }
 
     .date-col {
@@ -465,6 +463,15 @@
       padding: 0 10px;
     }
 
+    .rsvp-punctuality {
+      font-size: 0.85rem;
+      color: var(--gold-dark);
+      margin-top: 10px;
+      font-weight: 600;
+      font-style: italic;
+      padding: 0 10px;
+    }
+
     /* MODAL FLOTANTE */
     .modal-overlay {
       display: none;
@@ -559,7 +566,7 @@
     <div class="hero-section" id="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content reveal">
-        <h1 class="hero-title">Stefany Cateriano Justo</h1>
+        <h1 class="hero-title">Stefany</h1>
         <p class="hero-subtitle">XV Años 👑</p>
       </div>
     </div>
@@ -570,9 +577,7 @@
         <p class="message-text">
           La vida está hecha de instantes especiales, pero compartirlos con las personas que hacen mi mundo más bonito los transforma en recuerdos únicos.
         </p>
-        <p class="message-punctuality">
-          «Tu puntualidad nos ayudará a compartir cada instante juntos.»
-        </p>
+        <div class="message-signature">Stefany Cateriano Justo</div>
       </div>
     </div>
 
@@ -605,7 +610,7 @@
       </div>
     </div>
 
-    <!-- FECHA -->
+    <!-- FECHA Y PRIMER BOTÓN DE CONFIRMACIÓN -->
     <div class="date-section">
       <div class="date-table reveal">
         <div class="date-col">
@@ -624,6 +629,10 @@
           <div class="day-number">11</div>
         </div>
       </div>
+
+      <button class="btn btn-pulse openModalBtn reveal">
+        CONFIRMAR ASISTENCIA
+      </button>
     </div>
 
     <div class="gold-divider"></div>
@@ -632,7 +641,7 @@
     <div class="gallery-section">
       <h2 class="gallery-title reveal">Nuestra Quinceañera</h2>
       <div class="main-photo-card reveal">
-        <img src="foto3.jpg" alt="Stefany Cateriano Justo">
+        <img src="foto3.jpg" alt="Stefany">
       </div>
     </div>
 
@@ -720,13 +729,16 @@
 
     <div class="gold-divider" style="margin-bottom: 0;"></div>
 
-    <!-- SECCIÓN DE CONFIRMACIÓN AL FINAL -->
+    <!-- SECCIÓN DE SEGUNDA CONFIRMACIÓN Y NOTA AL FINAL -->
     <div class="rsvp-section">
-      <button id="openModalBtn" class="btn btn-pulse reveal">
+      <button class="btn btn-pulse openModalBtn reveal">
         CONFIRMAR ASISTENCIA
       </button>
       <p class="rsvp-deadline reveal">
         Por favor, confirma tu asistencia antes del sábado 26 de setiembre para preparar todo con cariño.
+      </p>
+      <p class="rsvp-punctuality reveal">
+        «Tu puntualidad nos ayudará a compartir cada instante juntos.»
       </p>
     </div>
 
@@ -773,14 +785,16 @@
 
   <script src="app.js"></script>
   <script>
-    // CONTROL DEL MODAL
+    // CONTROL DEL MODAL (Abre con cualquiera de los dos botones)
     const modal = document.getElementById('rsvpModal');
-    const openBtn = document.getElementById('openModalBtn');
+    const openBtns = document.querySelectorAll('.openModalBtn');
     const closeBtn = document.getElementById('closeModalBtn');
 
-    openBtn.onclick = function() {
-      modal.style.display = 'flex';
-    }
+    openBtns.forEach(btn => {
+      btn.onclick = function() {
+        modal.style.display = 'flex';
+      }
+    });
 
     closeBtn.onclick = function() {
       modal.style.display = 'none';
