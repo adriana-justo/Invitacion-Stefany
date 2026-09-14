@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis 15 Años - Stefany</title>
+  <title>Mis 15 Años - Stefany Cateriano Justo</title>
 
   <!-- Fuentes de Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +61,7 @@
     /* HERO */
     .hero-section {
       position: relative;
-      height: 480px;
+      height: 500px;
       background: url('foto1.jpg') center top / cover no-repeat;
       display: flex;
       flex-direction: column;
@@ -73,7 +73,7 @@
     .hero-overlay {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.75) 100%);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.8) 100%);
     }
 
     .hero-content {
@@ -81,14 +81,15 @@
       z-index: 2;
       text-align: center;
       color: #fff;
+      padding: 0 15px;
     }
 
     .hero-title {
       font-family: 'Great Vibes', cursive;
-      font-size: 4.8rem;
+      font-size: 3.8rem;
       color: var(--gold-light);
       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
-      line-height: 1;
+      line-height: 1.1;
     }
 
     .hero-subtitle {
@@ -96,7 +97,7 @@
       font-size: 1.4rem;
       letter-spacing: 5px;
       color: #ffffff;
-      margin-top: 5px;
+      margin-top: 8px;
       text-transform: uppercase;
       text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
     }
@@ -122,11 +123,13 @@
       color: #555;
     }
 
-    .message-footer {
+    .message-punctuality {
+      font-style: italic;
       font-weight: 600;
       margin-top: 15px;
       color: var(--gold-dark);
-      font-size: 1.1rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
     }
 
     /* CONTEO REGRESIVO */
@@ -198,7 +201,7 @@
       display: flex;
       justify-content: center;
       gap: 10px;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
     }
 
     .date-col {
@@ -306,34 +309,6 @@
       display: block;
     }
 
-    /* UBICACIÓN */
-    .location-section {
-      background-color: var(--bg-cream);
-      padding: 35px 20px;
-      text-align: center;
-    }
-
-    .location-title {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.8rem;
-      color: var(--gold-dark);
-      margin-bottom: 5px;
-    }
-
-    .location-details {
-      margin-bottom: 15px;
-      font-size: 0.95rem;
-      color: #444;
-      line-height: 1.5;
-    }
-
-    .location-time {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.8rem;
-      color: var(--gold-primary);
-      margin: 10px 0 20px;
-    }
-
     /* DRESS CODE */
     .dresscode-section {
       background: #fff;
@@ -367,10 +342,38 @@
       font-style: italic;
     }
 
+    /* UBICACIÓN */
+    .location-section {
+      background-color: var(--bg-cream);
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    .location-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.8rem;
+      color: var(--gold-dark);
+      margin-bottom: 5px;
+    }
+
+    .location-details {
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .location-time {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.8rem;
+      color: var(--gold-primary);
+      margin: 10px 0 20px;
+    }
+
     /* ITINERARIO */
     .itinerary-section {
-      background: var(--bg-cream);
-      padding: 35px 20px 45px;
+      background: #fff;
+      padding: 35px 20px 30px;
       text-align: center;
     }
 
@@ -444,6 +447,22 @@
       font-size: 14px;
       border: 2px solid #fff;
       box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    /* SECCIÓN CONFIRMACIÓN AL FINAL */
+    .rsvp-section {
+      background-color: var(--bg-cream);
+      padding: 40px 20px 45px;
+      text-align: center;
+    }
+
+    .rsvp-deadline {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 15px;
+      font-style: italic;
+      line-height: 1.4;
+      padding: 0 10px;
     }
 
     /* MODAL FLOTANTE */
@@ -540,7 +559,7 @@
     <div class="hero-section" id="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content reveal">
-        <h1 class="hero-title">Stefany</h1>
+        <h1 class="hero-title">Stefany Cateriano Justo</h1>
         <p class="hero-subtitle">XV Años 👑</p>
       </div>
     </div>
@@ -549,9 +568,11 @@
     <div class="message-section">
       <div class="message-box reveal">
         <p class="message-text">
-          Hay eventos en la vida que son muy especiales por sí solos, pero poder compartirlos con quienes más quiero los convierte en momentos únicos e inolvidables.
+          La vida está hecha de instantes especiales, pero compartirlos con las personas que hacen mi mundo más bonito los transforma en recuerdos únicos.
         </p>
-        <p class="message-footer">¡Te espero en mi fiesta!</p>
+        <p class="message-punctuality">
+          «Tu puntualidad nos ayudará a compartir cada instante juntos.»
+        </p>
       </div>
     </div>
 
@@ -584,7 +605,7 @@
       </div>
     </div>
 
-    <!-- FECHA Y BOTÓN DE CONFIRMACIÓN -->
+    <!-- FECHA -->
     <div class="date-section">
       <div class="date-table reveal">
         <div class="date-col">
@@ -603,10 +624,6 @@
           <div class="day-number">11</div>
         </div>
       </div>
-
-      <button id="openModalBtn" class="btn btn-pulse reveal">
-        CONFIRMAR ASISTENCIA
-      </button>
     </div>
 
     <div class="gold-divider"></div>
@@ -615,7 +632,7 @@
     <div class="gallery-section">
       <h2 class="gallery-title reveal">Nuestra Quinceañera</h2>
       <div class="main-photo-card reveal">
-        <img src="foto3.jpg" alt="Stefany">
+        <img src="foto3.jpg" alt="Stefany Cateriano Justo">
       </div>
     </div>
 
@@ -646,7 +663,7 @@
 
     <div class="gold-divider"></div>
 
-    <!-- ITINERARIO ACTUALIZADO -->
+    <!-- ITINERARIO -->
     <div class="itinerary-section">
       <h2 class="itinerary-title reveal">ITINERARIO</h2>
 
@@ -701,6 +718,18 @@
       </div>
     </div>
 
+    <div class="gold-divider" style="margin-bottom: 0;"></div>
+
+    <!-- SECCIÓN DE CONFIRMACIÓN AL FINAL -->
+    <div class="rsvp-section">
+      <button id="openModalBtn" class="btn btn-pulse reveal">
+        CONFIRMAR ASISTENCIA
+      </button>
+      <p class="rsvp-deadline reveal">
+        Por favor, confirma tu asistencia antes del sábado 26 de setiembre para preparar todo con cariño.
+      </p>
+    </div>
+
   </div>
 
   <!-- MODAL / FORMULARIO FLOTANTE -->
@@ -728,8 +757,8 @@
         </div>
 
         <div class="form-group">
-          <label for="children">N° de Niños (Menores de 12 años)</label>
-          <input type="number" id="children" name="Ninos_Menores_12" class="form-control" placeholder="0" min="0" max="10" value="0">
+          <label for="children">N° de Niños (Menores de 12 años) *</label>
+          <input type="number" id="children" name="Ninos_Menores_12" class="form-control" placeholder="0" min="0" max="10" value="0" required>
         </div>
 
         <div class="form-group">
