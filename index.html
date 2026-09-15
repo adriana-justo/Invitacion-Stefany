@@ -18,6 +18,7 @@
       --bg-cream: #faf6f0;
       --text-dark: #2c2c2c;
       --white: #ffffff;
+      --red-accent: #a71d2a;
     }
 
     * {
@@ -231,10 +232,10 @@
       margin-top: 2px;
     }
 
-    /* CALENDARIO & FECHA ELEGANTE TIPO INVITACIÓN */
+    /* FECHA ELEGANTE */
     .calendar-section {
       background-color: var(--white);
-      padding: 35px 20px 30px;
+      padding: 40px 20px 35px;
       text-align: center;
     }
 
@@ -242,8 +243,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      max-width: 320px;
-      margin: 0 auto 20px;
+      max-width: 340px;
+      margin: 0 auto 25px;
       padding: 10px 0;
     }
 
@@ -258,14 +259,14 @@
     }
 
     .date-center-col {
-      padding: 0 15px;
+      padding: 0 18px;
       border-left: 1px solid var(--gold-primary);
       border-right: 1px solid var(--gold-primary);
     }
 
     .date-number {
       font-family: 'Cinzel', serif;
-      font-size: 3.8rem;
+      font-size: 4rem;
       color: var(--gold-dark);
       line-height: 0.9;
       font-weight: 700;
@@ -273,62 +274,12 @@
 
     .date-month-year {
       font-family: 'Cinzel', serif;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       letter-spacing: 3px;
       color: var(--text-dark);
       text-transform: uppercase;
-      margin-top: 5px;
+      margin-top: 6px;
       font-weight: 600;
-    }
-
-    .calendar-grid {
-      max-width: 310px;
-      margin: 0 auto 25px;
-      background: #fafafa;
-      padding: 15px;
-      border-radius: 10px;
-      border: 1px solid #eee;
-    }
-
-    .calendar-days-header {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 12px;
-    }
-
-    .calendar-days-grid {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 5px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.85rem;
-      color: #666;
-    }
-
-    .calendar-day-cell {
-      padding: 5px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .calendar-day-cell.muted {
-      color: #ccc;
-    }
-
-    .calendar-day-cell.event-day {
-      background: var(--gold-primary);
-      color: #ffffff;
-      font-weight: bold;
-      border-radius: 6px;
-      width: 28px;
-      height: 28px;
-      margin: 0 auto;
-      box-shadow: 0 2px 8px rgba(212, 175, 55, 0.6);
     }
 
     /* PADRES Y PADRINOS */
@@ -401,26 +352,27 @@
       display: block;
     }
 
-    /* CÓDIGO DE VESTIMENTA */
+    /* CÓDIGO DE VESTIMENTA CON DETALLE ROJO ROSEO / VINO */
     .dresscode-compact {
-      background: var(--bg-cream);
-      padding: 20px 15px;
+      background: #fdf8f8;
+      padding: 22px 15px;
       text-align: center;
-      border-top: 1px solid rgba(212, 175, 55, 0.3);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      border-top: 1px solid rgba(167, 29, 42, 0.3);
+      border-bottom: 1px solid rgba(167, 29, 42, 0.3);
     }
 
     .dresscode-compact-title {
       font-family: 'Oswald', sans-serif;
       font-size: 1.05rem;
       letter-spacing: 3px;
-      color: var(--gold-dark);
+      color: var(--red-accent);
       text-transform: uppercase;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      font-weight: 600;
     }
 
     .dresscode-compact-text {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: #555;
       font-style: italic;
     }
@@ -588,7 +540,7 @@
       margin-bottom: 15px;
     }
 
-    /* ÁLBUM DE RECUERDOS */
+    /* ÁLBUM DE RECUERDOS (DOTS) */
     .album-section {
       background-color: var(--bg-cream);
       padding: 35px 20px;
@@ -607,6 +559,21 @@
       color: #555;
       line-height: 1.5;
       margin-bottom: 20px;
+    }
+
+    .dots-code-box {
+      font-size: 0.85rem;
+      color: #444;
+      margin-top: 8px;
+      margin-bottom: 15px;
+    }
+
+    .dots-code-box span {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      color: var(--gold-dark);
+      letter-spacing: 1.5px;
+      font-weight: bold;
     }
 
     /* SECCIÓN CONFIRMACIÓN AL FINAL CON FOTO */
@@ -852,10 +819,8 @@
       </div>
     </div>
 
-    <!-- 4. CALENDARIO OCTUBRE 2026 CON FECHA DESTACADA ESTILO ELEGANTE -->
+    <!-- 4. FECHA DESTACADA ESTILO ELEGANTE -->
     <div class="calendar-section">
-      
-      <!-- ENCABEZADO DE FECHA Y HORA -->
       <div class="date-display-container reveal">
         <div class="date-side-col">SÁBADO</div>
         <div class="date-center-col">
@@ -863,21 +828,6 @@
           <div class="date-month-year">OCTUBRE 2026</div>
         </div>
         <div class="date-side-col">A LAS 8:00 PM</div>
-      </div>
-
-      <div class="calendar-grid reveal">
-        <div class="calendar-days-header">
-          <div>DO</div><div>LU</div><div>MA</div><div>MI</div><div>JU</div><div>VI</div><div>SA</div>
-        </div>
-        <div class="calendar-days-grid">
-          <div class="calendar-day-cell muted">27</div><div class="calendar-day-cell muted">28</div><div class="calendar-day-cell muted">29</div><div class="calendar-day-cell muted">30</div>
-          <div class="calendar-day-cell">1</div><div class="calendar-day-cell">2</div><div class="calendar-day-cell">3</div>
-          <div class="calendar-day-cell">4</div><div class="calendar-day-cell">5</div><div class="calendar-day-cell">6</div><div class="calendar-day-cell">7</div><div class="calendar-day-cell">8</div><div class="calendar-day-cell">9</div>
-          <div class="calendar-day-cell"><div class="event-day">10</div></div>
-          <div class="calendar-day-cell">11</div><div class="calendar-day-cell">12</div><div class="calendar-day-cell">13</div><div class="calendar-day-cell">14</div><div class="calendar-day-cell">15</div><div class="calendar-day-cell">16</div><div class="calendar-day-cell">17</div>
-          <div class="calendar-day-cell">18</div><div class="calendar-day-cell">19</div><div class="calendar-day-cell">20</div><div class="calendar-day-cell">21</div><div class="calendar-day-cell">22</div><div class="calendar-day-cell">23</div><div class="calendar-day-cell">24</div>
-          <div class="calendar-day-cell">25</div><div class="calendar-day-cell">26</div><div class="calendar-day-cell">27</div><div class="calendar-day-cell">28</div><div class="calendar-day-cell">29</div><div class="calendar-day-cell">30</div><div class="calendar-day-cell">31</div>
-        </div>
       </div>
 
       <button class="btn btn-pulse openModalBtn reveal">
@@ -922,9 +872,9 @@
       </div>
     </div>
 
-    <!-- 7. CÓDIGO DE VESTIMENTA -->
+    <!-- 7. CÓDIGO DE VESTIMENTA ROJO ELEGANTE -->
     <div class="dresscode-compact reveal">
-      <div class="dresscode-compact-title">👗 Código de Vestimenta: Elegante 👔</div>
+      <div class="dresscode-compact-title">🌹 Código de Vestimenta: Elegante 🎩</div>
       <div class="dresscode-compact-text">Reservamos los tonos dorados para la quinceañera ✨</div>
     </div>
 
@@ -1027,19 +977,22 @@
 
     <div class="gold-divider"></div>
 
-    <!-- 11. ÁLBUM DE RECUERDOS (ACTUALIZADO CON TARJETA QR Y BOTÓN) -->
+    <!-- 11. ÁLBUM DE RECUERDOS (DOTS) -->
     <div class="album-section reveal">
       <h2 class="album-title">Álbum de Recuerdos</h2>
       <p class="album-text">
-        Escanea el código QR o haz clic en el botón para subir tus mejores fotos del evento.<br>
+        Mira y comparte todos los momentos especiales del evento en este álbum ✨<br>
         <strong>¡COMPARTE CONMIGO!</strong>
       </p>
 
       <div class="qr-card">
         <img src="qr-album.jpg" alt="QR Álbum de Recuerdos" class="qr-img">
         
-        <!-- Reemplaza el enlace de abajo por la URL de tu álbum de Wedshoots, Dots o Google Photos cuando lo tengas -->
-        <a href="https://www.google.com" target="_blank" class="btn" style="padding: 10px 15px; font-size: 0.85rem;">
+        <div class="dots-code-box">
+          Código del evento: <span>ovbGTZBxmBz0</span>
+        </div>
+
+        <a href="https://web.dotstheapp.com/a?group=2556995&dlBy=tefitacate&code=ovbGTZBxmBz0&utm_source=guest&utm_medium=share&utm_campaign=guest_event_album&force_app=1" target="_blank" class="btn" style="padding: 10px 15px; font-size: 0.85rem;">
           SUBIR MIS FOTOS 📸
         </a>
       </div>
