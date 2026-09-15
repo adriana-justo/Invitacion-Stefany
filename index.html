@@ -561,19 +561,40 @@
       font-weight: bold;
     }
 
-    .dots-app-link {
-      display: inline-block;
-      margin-top: 12px;
-      font-size: 0.8rem;
-      color: #666;
-      text-decoration: underline;
-      font-style: italic;
+    /* BOTONES TIENDAS APP (ANDROID / APPLE) */
+    .store-buttons-container {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
     }
 
-    /* SECCIÓN CONFIRMACIÓN AL FINAL CON FOTO DE LA NIÑA (FOTO4) */
+    .btn-store {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 12px;
+      background: #ffffff;
+      border: 1px solid var(--gold-primary);
+      border-radius: 6px;
+      color: var(--text-dark);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      width: 48%;
+    }
+
+    .btn-store:hover {
+      background: var(--gold-primary);
+      color: #ffffff;
+    }
+
+    /* SECCIÓN CONFIRMACIÓN AL FINAL CON FOTO4.PNG */
     .rsvp-final-section {
       position: relative;
-      background: url('foto4.jpg') center/cover no-repeat;
+      background: url('foto4.png') center/cover no-repeat;
       padding: 60px 20px 50px;
       text-align: center;
       color: #ffffff;
@@ -762,9 +783,9 @@
 </head>
 <body>
 
-  <!-- REPRODUCTOR DE AUDIO -->
+  <!-- REPRODUCTOR DE AUDIO (CONECTADO A MUSICA.MP3) -->
   <audio id="bgMusic" loop>
-    <source src="musica" type="audio/mpeg">
+    <source src="musica.mp3" type="audio/mpeg">
   </audio>
 
   <!-- BOTÓN FLOTANTE DE MÚSICA -->
@@ -984,12 +1005,9 @@
 
     <div class="gold-divider"></div>
 
-    <!-- 11. ÁLBUM DE RECUERDOS (AJUSTADO SEGÚN TU SOLICITUD) -->
+    <!-- 11. ÁLBUM DE RECUERDOS (DOTS - BOTONES ANDROID Y APPLE) -->
     <div class="album-section reveal">
       <h2 class="album-title">Álbum de Recuerdos</h2>
-      <p class="album-text">
-        Comparte todos los momentos especiales en este álbum ✨
-      </p>
 
       <div class="qr-card">
         <img src="qr-album.jpg" alt="QR Álbum de Recuerdos" class="qr-img">
@@ -1002,13 +1020,19 @@
           SUBIR MIS FOTOS 📸
         </a>
 
-        <a href="https://dotstheapp.com" target="_blank" class="dots-app-link">
-          Descargar la app Dots para poder subir tus fotos
-        </a>
+        <!-- BOTONES PARA DESCARGAR LA APP EN ANDROID Y APPLE -->
+        <div class="store-buttons-container">
+          <a href="https://play.google.com/store/apps/details?id=social.onelife" target="_blank" class="btn-store">
+            🤖 Android
+          </a>
+          <a href="https://apps.apple.com/us/app/dots-memories-tu-historia/id6449039420" target="_blank" class="btn-store">
+            🍎 iPhone
+          </a>
+        </div>
       </div>
     </div>
 
-    <!-- 12. SECCIÓN DE CONFIRMACIÓN FINAL CON FOTO4 -->
+    <!-- 12. SECCIÓN DE CONFIRMACIÓN FINAL CON FOTO4.PNG -->
     <div class="rsvp-final-section">
       <div class="rsvp-final-overlay"></div>
       <div class="rsvp-final-content">
