@@ -390,7 +390,7 @@
       margin: 10px 0 20px;
     }
 
-    /* ITINERARIO (CON FONDO FOTO4.PNG) */
+    /* ITINERARIO */
     .itinerary-section {
       position: relative;
       background: url('foto4.png') center/cover no-repeat;
@@ -483,7 +483,7 @@
       box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
     }
 
-    /* SUGERENCIA DE REGALOS & YAPE (CON FONDO FOTO5.JPG) */
+    /* SUGERENCIA DE REGALOS & YAPE */
     .gift-section {
       position: relative;
       background: url('foto5.jpg') center/cover no-repeat;
@@ -554,7 +554,7 @@
       margin-bottom: 15px;
     }
 
-    /* ÁLBUM DE RECUERDOS (DOTS - BOTONES ANDROID Y APPLE) */
+    /* ÁLBUM DE RECUERDOS (DOTS) */
     .album-section {
       background-color: var(--bg-cream);
       padding: 35px 20px;
@@ -583,7 +583,6 @@
       font-weight: bold;
     }
 
-    /* BOTONES TIENDAS APP (ANDROID / APPLE) */
     .store-buttons-container {
       margin-top: 15px;
       display: flex;
@@ -613,7 +612,7 @@
       color: #ffffff;
     }
 
-    /* SECCIÓN CONFIRMACIÓN AL FINAL CON FOTO6.JPG */
+    /* SECCIÓN CONFIRMACIÓN AL FINAL */
     .rsvp-final-section {
       position: relative;
       background: url('foto6.jpg') center/cover no-repeat;
@@ -805,7 +804,7 @@
 </head>
 <body>
 
-  <!-- REPRODUCTOR DE AUDIO (CONECTADO A MUSICA.MP3) -->
+  <!-- REPRODUCTOR DE AUDIO -->
   <audio id="bgMusic" loop>
     <source src="musica.mp3" type="audio/mpeg">
   </audio>
@@ -936,7 +935,7 @@
       <p class="location-details reveal">
         Acompáñanos a celebrar este gran día.<br>
         <strong style="font-size: 1.1rem; color: var(--gold-dark);">Local Bambú Fest</strong><br>
-        <span>C. Tahuantinsuyo con C. Huscar - Moquegua</span><br>
+        <span>C. Tahuantinsuyo con C. Huáscar - Moquegua</span><br>
         <span style="font-size: 0.85rem; color: #666; font-style: italic;">Ref. Por la Institución Educativa Particular Unión</span>
       </p>
       <div class="location-time reveal">8:00 pm</div>
@@ -948,7 +947,7 @@
 
     <div class="gold-divider"></div>
 
-    <!-- 9. ITINERARIO (AHORA CON FONDO FOTO4.PNG) -->
+    <!-- 9. ITINERARIO -->
     <div class="itinerary-section">
       <div class="itinerary-overlay"></div>
       <div class="itinerary-content">
@@ -1006,7 +1005,7 @@
       </div>
     </div>
 
-    <!-- 10. SUGERENCIA DE REGALOS & YAPE (AHORA CON FONDO FOTO5.JPG) -->
+    <!-- 10. SUGERENCIA DE REGALOS & YAPE -->
     <div class="gift-section reveal">
       <div class="gift-overlay"></div>
       <div class="gift-content">
@@ -1022,7 +1021,7 @@
           <img src="qr-yape.jpg" alt="QR Yape" class="qr-img">
           <div class="qr-holder">Titular: Karem Justo Portocarrero</div>
           
-          <a href="https://wa.me/51953608514?text=Hola,%20adjunto%20mi%20confirmación%20de%20detalle%20para%20los%2015%20de%20Stefany" target="_blank" class="btn" style="padding: 10px 15px; font-size: 0.85rem;">
+          <a href="https://wa.me/51953600000?text=Hola,%20adjunto%20mi%20confirmación%20de%20detalle%20para%20los%2015%20de%20Stefany" target="_blank" class="btn" style="padding: 10px 15px; font-size: 0.85rem;">
             CONFIRMAR DETALLE ✉️
           </a>
         </div>
@@ -1044,7 +1043,6 @@
           SUBIR MIS FOTOS 📸
         </a>
 
-        <!-- BOTONES PARA DESCARGAR LA APP EN ANDROID Y APPLE -->
         <div class="store-buttons-container">
           <a href="https://play.google.com/store/apps/details?id=social.onelife" target="_blank" class="btn-store">
             🤖 Android
@@ -1056,7 +1054,7 @@
       </div>
     </div>
 
-    <!-- 12. SECCIÓN DE CONFIRMACIÓN FINAL CON FOTO6.JPG -->
+    <!-- 12. SECCIÓN DE CONFIRMACIÓN FINAL -->
     <div class="rsvp-final-section">
       <div class="rsvp-final-overlay"></div>
       <div class="rsvp-final-content">
@@ -1080,19 +1078,16 @@
       <span id="closeModalBtn" class="close-modal">&times;</span>
       <h2 class="modal-title">Confirmar Asistencia</h2>
       
-      <!-- FORMULARIO CONECTADO A WEB3FORMS -->
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="f3dc16c3-2163-4962-9b29-68f1368241cb">
-        <input type="hidden" name="subject" value="Nueva Confirmación - 15 de Stefany">
-
+      <!-- FORMULARIO DIRECTO A GOOGLE SHEETS -->
+      <form id="rsvpForm">
         <div class="form-group">
           <label for="name">Nombre y Apellido *</label>
-          <input type="text" id="name" name="Nombre" class="form-control" placeholder="Ej. María García" required>
+          <input type="text" id="name" name="nombre" class="form-control" placeholder="Ej. María García" required>
         </div>
 
         <div class="form-group">
           <label for="guests">N° de Acompañantes (Adultos) *</label>
-          <select id="guests" name="Acompañantes_Adultos" class="form-control" required>
+          <select id="guests" name="acompaniantes" class="form-control" required>
             <option value="Solo yo (1 persona)">Solo yo (1 persona)</option>
             <option value="1 acompañante (2 personas)">1 acompañante (2 personas)</option>
           </select>
@@ -1100,15 +1095,15 @@
 
         <div class="form-group">
           <label for="children">N° de Niños (Menores de 12 años) *</label>
-          <input type="number" id="children" name="Ninos_Menores_12" class="form-control" placeholder="0" min="0" max="10" value="0" required>
+          <input type="number" id="children" name="ninos" class="form-control" placeholder="0" min="0" max="10" value="0" required>
         </div>
 
         <div class="form-group">
           <label for="song">Canción que sugieres para el DJ 🎵</label>
-          <input type="text" id="song" name="Cancion_Sugerida" class="form-control" placeholder="Nombre de la canción o artista">
+          <input type="text" id="song" name="cancion" class="form-control" placeholder="Nombre de la canción o artista">
         </div>
 
-        <button type="submit" class="submit-btn">ENVIAR CONFIRMACIÓN</button>
+        <button type="submit" id="submitBtn" class="submit-btn">ENVIAR CONFIRMACIÓN</button>
       </form>
     </div>
   </div>
@@ -1151,6 +1146,48 @@
       }
       isPlaying = !isPlaying;
     }
+
+    // ENVÍO DE DATOS A GOOGLE SHEETS
+    const rsvpForm = document.getElementById('rsvpForm');
+    const submitBtn = document.getElementById('submitBtn');
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxgIrx3N0OeIs_hgZzdPJZgPz-rrV7K5tiR9lAFF0nVZ-UJ4yQzrw9-v_7GDS9aZsNK5w/exec';
+
+    rsvpForm.addEventListener('submit', e => {
+      e.preventDefault();
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'ENVIANDO...';
+
+      const formData = {
+        nombre: document.getElementById('name').value,
+        acompaniantes: document.getElementById('guests').value,
+        ninos: document.getElementById('children').value,
+        cancion: document.getElementById('song').value
+      };
+
+      fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(() => {
+        alert('¡Muchas gracias! Tu confirmación ha sido registrada exitosamente.');
+        modal.style.display = 'none';
+        rsvpForm.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'ENVIAR CONFIRMACIÓN';
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        alert('Ocurrió un error al enviar tu confirmación. Inténtalo nuevamente.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'ENVIAR CONFIRMACIÓN';
+      });
+    });
   </script>
 </body>
 </html>
