@@ -390,18 +390,32 @@
       margin: 10px 0 20px;
     }
 
-    /* ITINERARIO */
+    /* ITINERARIO (CON FONDO FOTO4.PNG) */
     .itinerary-section {
-      background: #fff;
-      padding: 35px 20px 30px;
+      position: relative;
+      background: url('foto4.png') center/cover no-repeat;
+      padding: 45px 20px 40px;
       text-align: center;
+      color: #ffffff;
+    }
+
+    .itinerary-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 15, 16, 0.82);
+      z-index: 1;
+    }
+
+    .itinerary-content {
+      position: relative;
+      z-index: 2;
     }
 
     .itinerary-title {
       font-family: 'Oswald', sans-serif;
       font-size: 2.2rem;
       letter-spacing: 4px;
-      color: var(--gold-primary);
+      color: var(--gold-light);
       margin-bottom: 30px;
     }
 
@@ -443,13 +457,13 @@
 
     .timeline-time {
       font-family: 'Oswald', sans-serif;
-      color: var(--gold-dark);
+      color: var(--gold-light);
       font-size: 1.05rem;
     }
 
     .timeline-event {
       font-size: 0.9rem;
-      color: #555;
+      color: #eaeaea;
     }
 
     .timeline-icon {
@@ -469,35 +483,50 @@
       box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
     }
 
-    /* SUGERENCIA DE REGALOS & YAPE */
+    /* SUGERENCIA DE REGALOS & YAPE (CON FONDO FOTO5.JPG) */
     .gift-section {
-      background-color: #fff;
-      padding: 35px 20px;
+      position: relative;
+      background: url('foto5.jpg') center/cover no-repeat;
+      padding: 45px 20px;
       text-align: center;
+      color: #ffffff;
+    }
+
+    .gift-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 15, 16, 0.78);
+      z-index: 1;
+    }
+
+    .gift-content {
+      position: relative;
+      z-index: 2;
     }
 
     .gift-title {
       font-family: 'Great Vibes', cursive;
       font-size: 3.2rem;
-      color: var(--gold-dark);
+      color: var(--gold-light);
       margin-bottom: 10px;
     }
 
     .gift-text {
       font-size: 0.9rem;
-      color: #555;
+      color: #eaeaea;
       line-height: 1.6;
       margin-bottom: 25px;
     }
 
     .qr-card {
-      background: var(--bg-cream);
+      background: rgba(250, 246, 240, 0.95);
       border: 2px solid var(--gold-primary);
       border-radius: 12px;
       padding: 20px;
       max-width: 300px;
       margin: 0 auto;
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      color: var(--text-dark);
     }
 
     .qr-title {
@@ -525,7 +554,7 @@
       margin-bottom: 15px;
     }
 
-    /* ÁLBUM DE RECUERDOS (DOTS) */
+    /* ÁLBUM DE RECUERDOS (DOTS - BOTONES ANDROID Y APPLE) */
     .album-section {
       background-color: var(--bg-cream);
       padding: 35px 20px;
@@ -537,13 +566,6 @@
       font-size: 3.2rem;
       color: var(--gold-dark);
       margin-bottom: 8px;
-    }
-
-    .album-text {
-      font-size: 0.9rem;
-      color: #555;
-      line-height: 1.5;
-      margin-bottom: 20px;
     }
 
     .dots-code-box {
@@ -591,10 +613,10 @@
       color: #ffffff;
     }
 
-    /* SECCIÓN CONFIRMACIÓN AL FINAL CON FOTO4.PNG */
+    /* SECCIÓN CONFIRMACIÓN AL FINAL CON FOTO6.JPG */
     .rsvp-final-section {
       position: relative;
-      background: url('foto4.png') center/cover no-repeat;
+      background: url('foto6.jpg') center/cover no-repeat;
       padding: 60px 20px 50px;
       text-align: center;
       color: #ffffff;
@@ -793,7 +815,7 @@
 
   <div class="card-container">
 
-    <!-- 1. PORTADA CON FOTO DE STEFANY (NOMBRE ABAJO PARA NO TAPAR LA CARA) -->
+    <!-- 1. PORTADA CON FOTO DE STEFANY -->
     <div class="hero-section" id="hero">
       <div class="hero-overlay"></div>
 
@@ -926,86 +948,88 @@
 
     <div class="gold-divider"></div>
 
-    <!-- 9. ITINERARIO -->
+    <!-- 9. ITINERARIO (AHORA CON FONDO FOTO4.PNG) -->
     <div class="itinerary-section">
-      <h2 class="itinerary-title reveal">ITINERARIO</h2>
+      <div class="itinerary-overlay"></div>
+      <div class="itinerary-content">
+        <h2 class="itinerary-title reveal">ITINERARIO</h2>
 
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-content">
-            <div class="timeline-time">08:30 pm</div>
-            <div class="timeline-event">Recepción</div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-content">
+              <div class="timeline-time">08:30 pm</div>
+              <div class="timeline-event">Recepción</div>
+            </div>
+            <div class="timeline-icon">🥂</div>
           </div>
-          <div class="timeline-icon">🥂</div>
-        </div>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-content">
-            <div class="timeline-time">09:00 pm</div>
-            <div class="timeline-event">Protocolo y Ceremonia</div>
+          <div class="timeline-item reveal">
+            <div class="timeline-content">
+              <div class="timeline-time">09:00 pm</div>
+              <div class="timeline-event">Protocolo y Ceremonia</div>
+            </div>
+            <div class="timeline-icon">👑</div>
           </div>
-          <div class="timeline-icon">👑</div>
-        </div>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-content">
-            <div class="timeline-time">10:15 pm</div>
-            <div class="timeline-event">Brindis</div>
+          <div class="timeline-item reveal">
+            <div class="timeline-content">
+              <div class="timeline-time">10:15 pm</div>
+              <div class="timeline-event">Brindis</div>
+            </div>
+            <div class="timeline-icon">🍸</div>
           </div>
-          <div class="timeline-icon">🍸</div>
-        </div>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-content">
-            <div class="timeline-time">10:30 pm</div>
-            <div class="timeline-event">Cena</div>
+          <div class="timeline-item reveal">
+            <div class="timeline-content">
+              <div class="timeline-time">10:30 pm</div>
+              <div class="timeline-event">Cena</div>
+            </div>
+            <div class="timeline-icon">🍽️</div>
           </div>
-          <div class="timeline-icon">🍽️</div>
-        </div>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-content">
-            <div class="timeline-time">11:00 pm</div>
-            <div class="timeline-event">Baile Sorpresa</div>
+          <div class="timeline-item reveal">
+            <div class="timeline-content">
+              <div class="timeline-time">11:00 pm</div>
+              <div class="timeline-event">Baile Sorpresa</div>
+            </div>
+            <div class="timeline-icon">✨</div>
           </div>
-          <div class="timeline-icon">✨</div>
-        </div>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-content">
-            <div class="timeline-time">11:30 pm</div>
-            <div class="timeline-event">Hora Loca</div>
+          <div class="timeline-item reveal">
+            <div class="timeline-content">
+              <div class="timeline-time">11:30 pm</div>
+              <div class="timeline-event">Hora Loca</div>
+            </div>
+            <div class="timeline-icon">🎉</div>
           </div>
-          <div class="timeline-icon">🎉</div>
         </div>
       </div>
     </div>
 
-    <div class="gold-divider"></div>
-
-    <!-- 10. SUGERENCIA DE REGALOS & YAPE -->
+    <!-- 10. SUGERENCIA DE REGALOS & YAPE (AHORA CON FONDO FOTO5.JPG) -->
     <div class="gift-section reveal">
-      <h2 class="gift-title">Sugerencia de Regalos</h2>
-      <p class="gift-text">
-        Tu presencia es el regalo más grande que podría recibir en este día tan especial.<br>
-        Si deseas brindarme un detalle, lo recibiré con mucho cariño.<br>
-        También puedes optar por la tradicional lluvia de sobres.
-      </p>
+      <div class="gift-overlay"></div>
+      <div class="gift-content">
+        <h2 class="gift-title">Sugerencia de Regalos</h2>
+        <p class="gift-text">
+          Tu presencia es el regalo más grande que podría recibir en este día tan especial.<br>
+          Si deseas brindarme un detalle, lo recibiré con mucho cariño.<br>
+          También puedes optar por la tradicional lluvia de sobres.
+        </p>
 
-      <div class="qr-card">
-        <div class="qr-title">Lluvia de Sobres / Yape</div>
-        <img src="qr-yape.jpg" alt="QR Yape" class="qr-img">
-        <div class="qr-holder">Titular: Karem Justo Portocarrero</div>
-        
-        <a href="https://wa.me/51953600000?text=Hola,%20adjunto%20mi%20confirmación%20de%20detalle%20para%20los%2015%20de%20Stefany" target="_blank" class="btn" style="padding: 10px 15px; font-size: 0.85rem;">
-          CONFIRMAR DETALLE ✉️
-        </a>
+        <div class="qr-card">
+          <div class="qr-title">Lluvia de Sobres / Yape</div>
+          <img src="qr-yape.jpg" alt="QR Yape" class="qr-img">
+          <div class="qr-holder">Titular: Karem Justo Portocarrero</div>
+          
+          <a href="https://wa.me/51953600000?text=Hola,%20adjunto%20mi%20confirmación%20de%20detalle%20para%20los%2015%20de%20Stefany" target="_blank" class="btn" style="padding: 10px 15px; font-size: 0.85rem;">
+            CONFIRMAR DETALLE ✉️
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="gold-divider"></div>
-
-    <!-- 11. ÁLBUM DE RECUERDOS (DOTS - BOTONES ANDROID Y APPLE) -->
+    <!-- 11. ÁLBUM DE RECUERDOS (DOTS) -->
     <div class="album-section reveal">
       <h2 class="album-title">Álbum de Recuerdos</h2>
 
@@ -1032,7 +1056,7 @@
       </div>
     </div>
 
-    <!-- 12. SECCIÓN DE CONFIRMACIÓN FINAL CON FOTO4.PNG -->
+    <!-- 12. SECCIÓN DE CONFIRMACIÓN FINAL CON FOTO6.JPG -->
     <div class="rsvp-final-section">
       <div class="rsvp-final-overlay"></div>
       <div class="rsvp-final-content">
