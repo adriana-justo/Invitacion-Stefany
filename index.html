@@ -231,39 +231,55 @@
       margin-top: 2px;
     }
 
-    /* CALENDARIO 2026 EXACTO */
+    /* CALENDARIO & FECHA ELEGANTE TIPO INVITACIÓN */
     .calendar-section {
       background-color: var(--white);
       padding: 35px 20px 30px;
       text-align: center;
     }
 
-    .calendar-main-day {
+    /* ENCABEZADO ESTILO TARJETA ELEGANTE */
+    .date-display-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 320px;
+      margin: 0 auto 20px;
+      padding: 10px 0;
+    }
+
+    .date-side-col {
+      flex: 1;
       font-family: 'Cinzel', serif;
-      font-size: 4rem;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      color: var(--text-dark);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .date-center-col {
+      padding: 0 15px;
+      border-left: 1px solid var(--gold-primary);
+      border-right: 1px solid var(--gold-primary);
+    }
+
+    .date-number {
+      font-family: 'Cinzel', serif;
+      font-size: 3.8rem;
       color: var(--gold-dark);
-      line-height: 1;
+      line-height: 0.9;
       font-weight: 700;
     }
 
-    .calendar-main-month {
+    .date-month-year {
       font-family: 'Cinzel', serif;
-      font-size: 1.3rem;
-      letter-spacing: 5px;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
       color: var(--text-dark);
       text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    .calendar-time-badge {
-      display: inline-block;
-      border: 1px solid var(--gold-primary);
-      border-radius: 15px;
-      padding: 3px 16px;
-      font-family: 'Oswald', sans-serif;
-      font-size: 1rem;
-      color: var(--gold-dark);
-      margin-bottom: 20px;
+      margin-top: 5px;
+      font-weight: 600;
     }
 
     .calendar-grid {
@@ -515,27 +531,6 @@
       font-size: 14px;
       border: 2px solid #fff;
       box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-    }
-
-    /* SUGERENCIA DE CANCIONES */
-    .song-section {
-      background-color: var(--bg-cream);
-      padding: 35px 20px;
-      text-align: center;
-    }
-
-    .song-title {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.2rem;
-      color: var(--gold-dark);
-      margin-bottom: 8px;
-    }
-
-    .song-text {
-      font-size: 0.9rem;
-      color: #555;
-      line-height: 1.5;
-      margin-bottom: 20px;
     }
 
     /* SUGERENCIA DE REGALOS & YAPE */
@@ -807,10 +802,6 @@
     <!-- 1. PORTADA CON FOTO DE STEFANY Y DESLICE HACIA ABAJO -->
     <div class="hero-section" id="hero">
       <div class="hero-overlay"></div>
-      
-      <div class="hero-top reveal">
-        <div class="hero-tag">MIS QUINCE</div>
-      </div>
 
       <div class="hero-content reveal">
         <h1 class="hero-title">Stefany</h1>
@@ -862,11 +853,18 @@
       </div>
     </div>
 
-    <!-- 4. CALENDARIO OCTUBRE 2026 -->
+    <!-- 4. CALENDARIO OCTUBRE 2026 CON FECHA DESTACADA ESTILO ELEGANTE -->
     <div class="calendar-section">
-      <div class="calendar-main-day reveal">10</div>
-      <div class="calendar-main-month reveal">OCTUBRE DE 2026</div>
-      <div class="calendar-time-badge reveal">8:30 PM</div>
+      
+      <!-- ENCABEZADO DE FECHA Y HORA (SÁBADO | 10 OCTUBRE 2026 | A LAS 8:00 PM) -->
+      <div class="date-display-container reveal">
+        <div class="date-side-col">SÁBADO</div>
+        <div class="date-center-col">
+          <div class="date-number">10</div>
+          <div class="date-month-year">OCTUBRE 2026</div>
+        </div>
+        <div class="date-side-col">A LAS 8:00 PM</div>
+      </div>
 
       <div class="calendar-grid reveal">
         <div class="calendar-days-header">
@@ -1008,19 +1006,7 @@
 
     <div class="gold-divider"></div>
 
-    <!-- 10. SUGERENCIA DE CANCIONES -->
-    <div class="song-section reveal">
-      <h2 class="song-title">Sugerencia de Canciones</h2>
-      <p class="song-text">
-        En una noche tan especial, la música será parte de cada recuerdo.<br>
-        Déjame aquí esa canción que te gustaría escuchar en mis quince años.
-      </p>
-      <button class="btn openModalBtn">SUGERIR CANCIÓN</button>
-    </div>
-
-    <div class="gold-divider"></div>
-
-    <!-- 11. SUGERENCIA DE REGALOS & YAPE -->
+    <!-- 10. SUGERENCIA DE REGALOS & YAPE -->
     <div class="gift-section reveal">
       <h2 class="gift-title">Sugerencia de Regalos</h2>
       <p class="gift-text">
@@ -1043,7 +1029,7 @@
 
     <div class="gold-divider"></div>
 
-    <!-- 12. ÁLBUM DE RECUERDOS -->
+    <!-- 11. ÁLBUM DE RECUERDOS -->
     <div class="album-section reveal">
       <h2 class="album-title">Álbum de Recuerdos</h2>
       <p class="album-text">
@@ -1051,7 +1037,6 @@
         <strong>¡COMPARTE CONMIGO!</strong>
       </p>
 
-      <!-- SECCIÓN DEL QR Y BOTÓN DE LA APP DE FOTOS -->
       <div style="margin-top: 15px;">
         <button class="btn" onclick="alert('Próximamente se activará el enlace para subir tus fotos el día del evento.')">
           SUBIR MIS FOTOS 📸
@@ -1059,7 +1044,7 @@
       </div>
     </div>
 
-    <!-- 13. SECCIÓN DE CONFIRMACIÓN FINAL CON FOTO DE LA NIÑA (FOTO4) -->
+    <!-- 12. SECCIÓN DE CONFIRMACIÓN FINAL CON FOTO DE LA NIÑA (FOTO4) -->
     <div class="rsvp-final-section">
       <button class="btn btn-pulse openModalBtn reveal">
         CONFIRMAR ASISTENCIA
@@ -1081,9 +1066,9 @@
       <h2 class="modal-title">Confirmar Asistencia</h2>
       
       <!-- FORMULARIO CONECTADO A WEB3FORMS -->
-<form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="f3dc16c3-2163-4962-9b29-68f1368241cb">
-  <input type="hidden" name="subject" value="Nueva Confirmación - 15 de Stefany">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="f3dc16c3-2163-4962-9b29-68f1368241cb">
+        <input type="hidden" name="subject" value="Nueva Confirmación - 15 de Stefany">
 
         <div class="form-group">
           <label for="name">Nombre y Apellido *</label>
