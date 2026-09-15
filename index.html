@@ -923,7 +923,7 @@
 
     <!-- 7. CÓDIGO DE VESTIMENTA -->
     <div class="dresscode-compact reveal">
-      <div class="dresscode-compact-title">🌹Código de Vestimenta: Elegante🎩</div>
+      <div class="dresscode-compact-title">🌹 Código de Vestimenta: Elegante 🎩</div>
       <div class="dresscode-compact-text">Reservamos los tonos dorados para la quinceañera ✨</div>
     </div>
 
@@ -935,7 +935,7 @@
       <p class="location-details reveal">
         Acompáñanos a celebrar este gran día.<br>
         <strong style="font-size: 1.1rem; color: var(--gold-dark);">Local Bambú Fest</strong><br>
-        <span>C. Tahuantinsuyo con C. Huscar - Moquegua</span><br>
+        <span>C. Tahuantinsuyo con C. Huáscar - Moquegua</span><br>
         <span style="font-size: 0.85rem; color: #666; font-style: italic;">Ref. Por la Institución Educativa Particular Unión</span>
       </p>
       <div class="location-time reveal">8:00 pm</div>
@@ -1021,7 +1021,7 @@
           <img src="qr-yape.jpg" alt="QR Yape" class="qr-img">
           <div class="qr-holder">Titular: Karem Justo Portocarrero</div>
           
-          <a href="https://wa.me/51953608514?text=Hola,%20adjunto%20mi%20confirmación%20de%20detalle%20para%20los%2015%20de%20Stefany" target="_blank" class="btn" style="padding: 10px 15px; font-size: 0.85rem;">
+          <a href="https://wa.me/51953600000?text=Hola,%20adjunto%20mi%20confirmación%20de%20detalle%20para%20los%2015%20de%20Stefany" target="_blank" class="btn" style="padding: 10px 15px; font-size: 0.85rem;">
             CONFIRMAR DETALLE ✉️
           </a>
         </div>
@@ -1108,8 +1108,35 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
   <script>
+    // CONTROL DE REVELADO CON SCROLL
+    document.addEventListener('DOMContentLoaded', () => {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      reveals.forEach(el => observer.observe(el));
+    });
+
+    // CONTEO REGRESIVO AL 10 DE OCTUBRE DE 2026
+    const targetDate = new Date('October 10, 2026 20:00:00').getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance > 0) {
+        document.getElementById('days').innerText = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
+        document.getElementById('hours').innerText = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+        document.getElementById('minutes').innerText = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+        document.getElementById('seconds').innerText = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+      }
+    }, 1000);
+
     // CONTROL DEL MODAL
     const modal = document.getElementById('rsvpModal');
     const openBtns = document.querySelectorAll('.openModalBtn');
@@ -1147,10 +1174,9 @@
       isPlaying = !isPlaying;
     }
 
-    // ENVÍO DE DATOS A GOOGLE SHEETS
+    // ENVÍO DIRECTO A GOOGLE SHEETS
     const rsvpForm = document.getElementById('rsvpForm');
     const submitBtn = document.getElementById('submitBtn');
-
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxgIrx3N0OeIs_hgZzdPJZgPz-rrV7K5tiR9lAFF0nVZ-UJ4yQzrw9-v_7GDS9aZsNK5w/exec';
 
     rsvpForm.addEventListener('submit', e => {
