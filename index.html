@@ -62,35 +62,19 @@
     /* HERO / PORTADA */
     .hero-section {
       position: relative;
-      height: 520px;
+      height: 560px;
       background: url('foto1.jpg') center top / cover no-repeat;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
-      padding: 30px 15px 20px;
+      padding: 30px 15px 25px;
     }
 
     .hero-overlay {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.8) 100%);
-    }
-
-    .hero-top {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      margin-top: 15px;
-    }
-
-    .hero-tag {
-      font-family: 'Oswald', sans-serif;
-      letter-spacing: 4px;
-      color: #fff;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.85) 100%);
     }
 
     .hero-content {
@@ -98,6 +82,7 @@
       z-index: 2;
       text-align: center;
       color: #fff;
+      margin-bottom: 20px;
     }
 
     .hero-title {
@@ -352,7 +337,7 @@
       display: block;
     }
 
-    /* CÓDIGO DE VESTIMENTA CON DETALLE ROJO ROSEO / VINO */
+    /* CÓDIGO DE VESTIMENTA */
     .dresscode-compact {
       background: #fdf8f8;
       padding: 22px 15px;
@@ -576,12 +561,34 @@
       font-weight: bold;
     }
 
-    /* SECCIÓN CONFIRMACIÓN AL FINAL CON FOTO */
+    .dots-app-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: #666;
+      text-decoration: underline;
+      font-style: italic;
+    }
+
+    /* SECCIÓN CONFIRMACIÓN AL FINAL CON FOTO DE LA NIÑA (FOTO4) */
     .rsvp-final-section {
-      background: linear-gradient(rgba(15, 15, 16, 0.85), rgba(15, 15, 16, 0.85)), url('foto4.jpg') center/cover no-repeat;
-      padding: 50px 20px 45px;
+      position: relative;
+      background: url('foto4.jpg') center/cover no-repeat;
+      padding: 60px 20px 50px;
       text-align: center;
       color: #ffffff;
+    }
+
+    .rsvp-final-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 15, 16, 0.75);
+      z-index: 1;
+    }
+
+    .rsvp-final-content {
+      position: relative;
+      z-index: 2;
     }
 
     .rsvp-deadline {
@@ -765,7 +772,7 @@
 
   <div class="card-container">
 
-    <!-- 1. PORTADA CON FOTO DE STEFANY Y DESLICE HACIA ABAJO -->
+    <!-- 1. PORTADA CON FOTO DE STEFANY (NOMBRE ABAJO PARA NO TAPAR LA CARA) -->
     <div class="hero-section" id="hero">
       <div class="hero-overlay"></div>
 
@@ -872,7 +879,7 @@
       </div>
     </div>
 
-    <!-- 7. CÓDIGO DE VESTIMENTA ROJO ELEGANTE -->
+    <!-- 7. CÓDIGO DE VESTIMENTA -->
     <div class="dresscode-compact reveal">
       <div class="dresscode-compact-title">🌹 Código de Vestimenta: Elegante 🎩</div>
       <div class="dresscode-compact-text">Reservamos los tonos dorados para la quinceañera ✨</div>
@@ -886,7 +893,7 @@
       <p class="location-details reveal">
         Acompáñanos a celebrar este gran día.<br>
         <strong style="font-size: 1.1rem; color: var(--gold-dark);">Local Bambú Fest</strong><br>
-        <span>C. Tahuantinsuyo con C. Huscar - Moquegua</span><br>
+        <span>C. Tahuantinsuyo con C. Huáscar - Moquegua</span><br>
         <span style="font-size: 0.85rem; color: #666; font-style: italic;">Ref. Por la Institución Educativa Particular Unión</span>
       </p>
       <div class="location-time reveal">8:00 pm</div>
@@ -977,12 +984,11 @@
 
     <div class="gold-divider"></div>
 
-    <!-- 11. ÁLBUM DE RECUERDOS (DOTS) -->
+    <!-- 11. ÁLBUM DE RECUERDOS (AJUSTADO SEGÚN TU SOLICITUD) -->
     <div class="album-section reveal">
       <h2 class="album-title">Álbum de Recuerdos</h2>
       <p class="album-text">
-        Mira y comparte todos los momentos especiales del evento en este álbum ✨<br>
-        <strong>¡COMPARTE CONMIGO!</strong>
+        Comparte todos los momentos especiales en este álbum ✨
       </p>
 
       <div class="qr-card">
@@ -995,20 +1001,27 @@
         <a href="https://web.dotstheapp.com/a?group=2556995&dlBy=tefitacate&code=ovbGTZBxmBz0&utm_source=guest&utm_medium=share&utm_campaign=guest_event_album&force_app=1" target="_blank" class="btn" style="padding: 10px 15px; font-size: 0.85rem;">
           SUBIR MIS FOTOS 📸
         </a>
+
+        <a href="https://dotstheapp.com" target="_blank" class="dots-app-link">
+          Descargar la app Dots para poder subir tus fotos
+        </a>
       </div>
     </div>
 
-    <!-- 12. SECCIÓN DE CONFIRMACIÓN FINAL CON FOTO DE LA NIÑA (FOTO4) -->
+    <!-- 12. SECCIÓN DE CONFIRMACIÓN FINAL CON FOTO4 -->
     <div class="rsvp-final-section">
-      <button class="btn btn-pulse openModalBtn reveal">
-        CONFIRMAR ASISTENCIA
-      </button>
-      <p class="rsvp-deadline reveal">
-        Por favor, confirma tu asistencia antes del sábado 26 de setiembre para preparar todo con cariño.
-      </p>
-      <p class="rsvp-punctuality reveal">
-        «Tu puntualidad nos ayudará a compartir cada instante juntos.»
-      </p>
+      <div class="rsvp-final-overlay"></div>
+      <div class="rsvp-final-content">
+        <button class="btn btn-pulse openModalBtn reveal">
+          CONFIRMAR ASISTENCIA
+        </button>
+        <p class="rsvp-deadline reveal">
+          Por favor, confirma tu asistencia antes del sábado 26 de setiembre para preparar todo con cariño.
+        </p>
+        <p class="rsvp-punctuality reveal">
+          «Tu puntualidad nos ayudará a compartir cada instante juntos.»
+        </p>
+      </div>
     </div>
 
   </div>
